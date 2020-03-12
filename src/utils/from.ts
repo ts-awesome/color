@@ -25,6 +25,9 @@ export function from(color: any, ...extra: string[]): Color {
 
   // eslint-disable-next-line prefer-const
   let {model, value = []} = get(color) ?? {};
+  if (model === undefined) {
+    throw new Error(`Unknown color scheme of ${color}`);
+  }
   const alpha = value.pop();
   if (model === 'hsl') {
     value = hsl.rgb(value as any) as any;
