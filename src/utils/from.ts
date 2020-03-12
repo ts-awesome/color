@@ -16,7 +16,7 @@ export function from(color: any, ...extra: string[]): Color {
   }
 
   if (Array.isArray(color)) {
-    color = color.map((x, idx) => `${x}${extra[idx]}`).join('');
+    color = color.map((x, idx) => `${x}${extra[idx] ?? ''}`).join('');
   }
 
   if (typeof color !== 'string') {

@@ -18,6 +18,6 @@ const space: any = (color: string | number | [number, number, number], green?: n
 
 (space as any).red = manipulation('rgb', 0, 255);
 (space as any).green = manipulation('rgb', 1, 255);
-(space as any).blue = manipulation('rgb', 1, 255);
+(space as any).blue = manipulation('rgb', 2, 255);
 
 export default (space as RGBColorSpace)
