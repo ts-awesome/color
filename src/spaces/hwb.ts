@@ -1,5 +1,5 @@
 import {base, manipulation} from "../operators/base";
-import {Color, HWBColorSpace} from "../interfaces";
+import {Color, HWBColorSpace, Operator} from "../interfaces";
 import {ColorImpl} from "../color.impl";
 import {hwb} from 'color-convert';
 
@@ -17,8 +17,8 @@ const space: any = (color: number | [number, number, number], white?: number, bl
 (space as any).white = manipulation('hwb', 1, 100);
 (space as any).black = manipulation('hwb', 2, 100);
 
-(space as any).rotate = (value: number) => base('hwb', 0, undefined, 360, 0, undefined, value, 360);
-(space as any).darken = (value: number) => base('hwb', 2, undefined, 100, 0, undefined, +value);
-(space as any).lighten = (value: number) => base('hwb', 1, undefined, 100, 0, undefined, +value);
+(space as any).rotate = (value: number): Operator => base('hwb', 0, undefined, 360, 0, undefined, value, 360);
+(space as any).darken = (value: number): Operator => base('hwb', 2, undefined, 100, 0, undefined, +value);
+(space as any).lighten = (value: number): Operator => base('hwb', 1, undefined, 100, 0, undefined, +value);
 
 export default (space as HWBColorSpace)
