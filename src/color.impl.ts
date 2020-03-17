@@ -8,6 +8,10 @@ function limit(value: number, max = 255, min = 0): number {
   return Math.min(max, Math.max(min, value));
 }
 
+function hex(x: number, l = 2): string {
+  return ('0000000000000000' + x.toString(16)).substr(-1 * l, l);
+}
+
 export class ColorImpl implements Color {
 
   private readonly _red: number;
@@ -90,7 +94,7 @@ export class ColorImpl implements Color {
   }
 
   public valueOf(): number {
-    return parseInt(to.hex([this._red, this._green, this._blue, this._alpha]).substr(1), 16);
+    return parseInt(`${hex(this._red)}${hex(this._green)}${hex(this._blue)}${hex(Math.ceil(255 * this._alpha))}`, 16);
   }
 
   public pipe(op: ReadonlyArray<Operator> | Operator, ...ops: Operator[]): Color {
