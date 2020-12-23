@@ -8,7 +8,7 @@ npm install --save @ts-awesome/color
 
 ```javascript
 
-import color, {grayscale, invert, hwb, rgb, mix, cmyk, opaquer, alpha, fade} from '@viatsyshyn/ts-color';
+import color, {grayscale, invert, hwb, rgb, mix, cmyk, opaquer, alpha, fade} from '@ts-awesome/color';
 
 const c = color`#123456`.pipe(
   grayscale,
