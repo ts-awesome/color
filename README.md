@@ -1,7 +1,7 @@
 # ts-color
 
 ```bash
-npm i -S @viatsyshyn/ts-color
+npm install --save @ts-awesome/color
 ```
 
 ## Sample usage
