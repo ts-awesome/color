@@ -37,6 +37,6 @@ export function from(color: any, ...extra: string[]): Color {
     throw new Error(`Unknown color scheme ${JSON.stringify(model)}`);
   }
 
-  const [red, green, blue] = value as [number, number, number];
+  const [red, green, blue] = value as any as [number, number, number];
   return new ColorImpl(red, green, blue, alpha);
 }
