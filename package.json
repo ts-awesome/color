@@ -14,7 +14,11 @@
   },
   "name": "@ts-awesome/color",
   "version": "0.0.0",
-  "description": "TypeScript Color manipulations",
+  "description": "TypeScript color manipulations library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ts-awesome/config"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Volodymyr Iatsyshyn <viatsyshyn@gmail.com>",
